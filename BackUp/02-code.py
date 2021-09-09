@@ -1,10 +1,11 @@
-#a = 10
-#b = 20
-#c = a + b
-
+a = 6
+b = 5
 #walrus operator
 #print("Sum is",c := a + b)
 
-print(a := 10, b := 20, c := a+b)
-
-print(f"Sum of {(a := 10)} and {(b := 20)} is {(c := a + b)}")
+print(f"""
+Sum is {(c := a + b)}
+Sub is {(d := a - b)}
+Div is {(e := a / b)}
+Mul is {(f := a * b)}
+""")

@@ -1,44 +1,17 @@
 '''
-start = 1
-stop  = 11 = (n-1) = 10
-step  = +1
-'''
-for i in range(1,11):
-    print(10 * i)
-
-print('*' * 10)
-
-'''
 start = 0
-stop  = 51 = (n-1) = 50
-step  = +5
+stop = n - 1 = 5 - 1 = 4
+step = +1
 '''
-for i in range(0,51,5):
+for i in range(5):
+    print("Hello")
+
+print("Bye")
+
+'''
+start = 2
+stop = n - 1 = 21 - 1 = 20
+step = +2
+'''
+for i in range(2,21,2):
     print(i)
-
-print('*' * 10)
-
-#Reverse Loop
-'''
-start = 10
-stop  = 1 = (n+1) = 2
-step  = -1
-'''
-for i in range(10,1,-1):
-    print(i)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

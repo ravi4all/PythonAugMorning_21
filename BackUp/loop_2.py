@@ -1,40 +1,12 @@
 '''
-for i in range(5):
-    for j in range(5):
-        print(i,j)
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
 '''
 
-'''
-for i in range(5):
-    print('12345')
-'''
+num = int(input("Enter a num : "))
 
-'''
-for i in range(4):
-    for j in range(1,6):
-        print(j, end='')
-    print()
-'''
-
-'''
-for i in range(5):
-    for j in range(i+1):
-        print(j+1, end='')
-    print()
-'''
-
-'''
-for i in range(5):
-    for j in range(1,6-i):
-        print(j, end='')
-    print()
-'''
-
-for i in range(5):
-    for j in range(i+1):
-        print(chr(97+j), end='')
-    print()
-
-
-
-
+for i in range(1,11):
+    print("{} x {} = {}".format(num, i, num * i))

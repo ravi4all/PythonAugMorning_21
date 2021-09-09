@@ -1,7 +1,7 @@
 name = input("Enter your name : ")
-print("Hello",name)
+print("hello",name)
 
-f_num = int(input("Enter first number : "))
-s_num = int(input("Enter second number : "))
-res = f_num + s_num
-print("Result is",res)
+x = int(input("Enter first num : "))
+y = int(input("Enter second num : "))
+z = x + y
+print("Sum is",z)
