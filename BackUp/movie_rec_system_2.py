@@ -9,26 +9,6 @@ dataset = {
 }
 
 user_1 = {"Thor","KGF","The mask","Gravity","Hulk","Baahubali","It","Batman"}
+user_2 = {"Thor","KGF","The mask","Ironman","Baahubali","The Nun","Superman"}
 
-scores = {}
 
-# Jaccard Distance
-for key in dataset:
-    movies = dataset[key]
-    movies = set(movies)
-    numer = len(user_1.intersection(movies))
-    denom = len(user_1.union(movies))
-    score = numer / denom
-    scores[key] = round(score,2)
-
-print(scores)
-
-max_value = max(scores.values())
-for key in scores:
-    if scores[key] == max_value:
-        category = key
-        break
-
-# print(category)
-rec_movies = set(dataset[category]) - user_1
-print(rec_movies)

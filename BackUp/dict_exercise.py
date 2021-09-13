@@ -1,24 +1,16 @@
 data = {
-    "names" : ["Ram","Shyam","Mohit","Sumit"],
-    "marks" : [78,98,70,58],
+    "names" : ["Ram","Shyam","Manoj","Mohit","Gopal"],
+    "dept" : ["IT","HR","IT","HR","SALES"],
+    "address" : ["delhi","pune","delhi","delhi","chennai"],
+    "salary" : [45000,89000,43000,50000,25000]
     }
 
 '''
-1. Find out total marks
-2. Find out average marks
-3. Print the data of students whose marks are above 80
+1. Show the employees of IT department
+2. Find the employee who is in IT department and has max salary
+3. Show the employees who lives in delhi and earn more than 40000
+4. Calculate average salary of employees of HR department
 '''
-n = len(data["marks"])
-
-total = 0
-
-for i in range(n):
-    total += data["marks"][i]
-
-print("Total Marks :",total)
-
-avg = total / n
-print("Average Marks :",avg)
-
-
-
+for i in range(len(data['names'])):
+    if data["dept"][i] == "IT":
+        print(data["names"][i], data["dept"][i], data["address"][i])
