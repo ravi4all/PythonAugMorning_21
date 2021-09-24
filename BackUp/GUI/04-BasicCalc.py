@@ -6,7 +6,7 @@ window.title("Calculator")
 
 expression = StringVar()
 
-textBox = Entry(window, text=expression, width=40, justify='right')
+textBox = Entry(window, text=expression, font = (14,), width=20, justify='right')
 textBox.grid(row=0, columnspan=4, padx=10, pady=10, ipady=5)
 
 buttons = [
@@ -19,9 +19,18 @@ buttons = [
 
 def calc(event):
     # print(event.widget.cget('text'))
-    expression = event.widget.cget('text')
-    value = textBox.get()
-    textBox.insert(len(value), expression)
+    value = event.widget.cget('text')
+    # value = textBox.get()
+
+    if value == "=":
+        expression = textBox.get()
+        result = eval(expression)
+        textBox.delete(0, END)
+        textBox.insert(0, result)
+    elif value == "c":
+        textBox.delete(0, END)
+    else:
+        textBox.insert(len(textBox.get()), value)
 
 buttons_dict = {}
 for i in range(len(buttons)):
