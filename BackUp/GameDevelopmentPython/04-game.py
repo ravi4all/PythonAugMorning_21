@@ -14,6 +14,7 @@ x, y = 0, 0
 w, h = 50, 50
 
 moveX = 0.3
+moveY = 0.3
 
 while True:
     for event in pygame.event.get():
@@ -25,11 +26,17 @@ while True:
 
     pygame.draw.rect(screen, white, [x, y, w, h])
     x += moveX
+    y += moveY
 
     if x > screenWidth - w:
         moveX = -0.3
     elif x < 0:
         moveX = 0.3
+
+    if y > screenHeight - h:
+        moveY = -0.3
+    elif y < 0:
+        moveY = 0.3
 
     pygame.display.flip()
 
